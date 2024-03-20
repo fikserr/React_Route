@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Nav start #########################
+
+.nav{
+    height: 100px;
+    background: rgb(5, 44, 86);
+    display: flex;
+    align-items:center;
+        &__logo{
+            font-size: 25px;
+            font-weight: 400;
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        &__links{
+            display: flex;
+            gap: 50px;
+        }
+        &__link{
+            font-size: 25px;
+            font-weight: 400;
+            color: aliceblue;
+            text-decoration: none;
+            transition: 0.3s;
+            &.active{
+                text-shadow:  0px 0px 50px rgb(255, 255, 255);
+                color: black;
+                font-weight: 400;
+            }
+        }
+        
+}
+
+// Nav end #########################
+
+
+// Home start #########################
+
+.home{
+    background-image: url(./img/photo_61676_20160303.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 90vh;
+
+    .container{
+
+        div{
+            display: flex;
+            flex-direction: column;
+            
+            h1{
+                padding-top: 250px;
+                color:black;
+                font-size: 35px;
+                width: 800px;
+                font-weight: 600;
+            }
+            p{
+                padding-top: 50px;
+                color:black;
+                font-size: 20px;
+                width: 600px;
+            }
+            .home__buy{
+                background: white;
+                border-radius: 15px;
+                padding: 8px 8px;
+                text-align: center;
+                color:black;
+                font-size: 35px;
+                height: 50px;
+                width: 225px;
+                margin-top: 60px;
+                transition: 0.5s;
+                &:hover{
+                    background: rgb(78, 78, 200);
+                }
+            }
+        }
+    }
+}
+
+// Home end #########################
