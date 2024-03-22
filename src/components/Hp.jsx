@@ -1,8 +1,34 @@
+import { useContext } from "react"
+import laptop from "../img/a13fdbaa-cf5a-4676-ba72-498381e6adc0-500x500.jpg"
+import { Context } from "./context/Context"
 
 
 function Hp() {
+  const {active} = useContext(Context)
   return (
-    <div>Hp</div>
+    <div><div className={`left__list ${active == false ? 'active' : ""}`}>
+    <div className="laptop__content">
+      <img src={laptop} alt="" className="laptop__img"/>
+        <div className="text">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <button>more</button>
+        </div>
+    </div>
+    <div className="laptop__content">
+      <img src={laptop} alt="" className="laptop__img"/>
+        <div className="text">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <button>more</button>
+        </div>
+    </div>
+    <div className="laptop__content">
+      <img src={laptop} alt="" className="laptop__img"/>
+        <div className="text">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <button>more</button>
+        </div>
+    </div>  
+  </div></div>
   )
 }
 

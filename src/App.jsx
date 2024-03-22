@@ -16,6 +16,7 @@ import Redmi from "./components/Redmi";
 import Artel from "./components/Artel";
 import Lg from "./components/Lg";
 import Hofman from "./components/Hofman";
+import ContextProvider from "./components/context/Context";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ContextProvider>
       <Routes>
         <Route path="/" element={<HomeLayout/>}>
           <Route index element={<Home/>}/>
@@ -47,6 +49,7 @@ function App() {
           <Route path="contact" element={<Contact/>}/>
         </Route>
       </Routes>
+      </ContextProvider>
     </BrowserRouter>
   )
 }

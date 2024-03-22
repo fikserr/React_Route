@@ -1,12 +1,14 @@
+import { FaAngleDown } from "react-icons/fa6"
 import { Link, Outlet } from "react-router-dom"
 
 function Smartphone() {
   return (
     <div>
-      <div className="smartphone__list">
-          <Link to="apple" className='smartphone__link'>Apple</Link>
-          <Link to="samsung" className='smartphone__link'>Samsung</Link>
-          <Link to="redmi" className='smartphone__link'>Redmi</Link>
+      <div className="left__list">
+      <p><FaAngleDown /></p>
+          <Link to="apple" className='products__link'>Apple</Link>
+          <Link to="samsung" className='products__link'>Samsung</Link>
+          <Link to="redmi" className='products__link'>Redmi</Link>
           
         </div>
         <Outlet/>

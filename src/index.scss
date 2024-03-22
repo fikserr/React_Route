@@ -8,6 +8,7 @@
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
+ 
 }
 
 // Nav start #########################
@@ -17,6 +18,9 @@
     background: rgb(5, 44, 86);
     display: flex;
     align-items:center;
+  
+   
+   
         &__logo{
             font-size: 25px;
             font-weight: 400;
@@ -39,10 +43,13 @@
             color: aliceblue;
             text-decoration: none;
             transition: 0.3s;
+            transform: scale(0.9);
             &.active{
                 text-shadow:  0px 0px 50px rgb(255, 255, 255);
                 color: black;
                 font-weight: 400;
+                opacity: 1;
+                transform: scale(1);
             }
         }
         
@@ -99,3 +106,79 @@
 }
 
 // Home end #########################
+
+.left__list{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    gap: 30px;
+    background: aqua;
+    width: 275px;
+    padding: 20px;
+    opacity: 1;
+    &.active{
+        opacity: 0;
+       display: none;
+    }
+
+    p{
+        text-align: center;
+        background:rgb(0, 0, 0);
+        color: white;
+        width: 80%;
+        border-radius: 5px
+    }
+    .products__link{
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+        background:white;
+        width: 80%;
+        border-radius: 5px;
+        padding: 8px;
+        transition: 0.5s;
+        &.actived{
+            color: brown;
+        }
+    }
+
+    .laptop__content{
+        display: flex;
+        width: 80%;
+        background: white;
+        padding: 8px;
+        border-radius: 5px;
+        .laptop__img{
+            width: 65px;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            p{
+                background:transparent;
+                color: black;
+                font-size: 10px;
+                text-align: left;
+            }
+            button{
+                border: none;
+                background: aqua;
+                width: 80px;
+                font-size: 10px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+.product__more{
+    display: none;
+    opacity: 0;
+    &.active{
+        opacity: 1;
+        display: block;
+    }
+}

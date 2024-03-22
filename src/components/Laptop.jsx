@@ -1,13 +1,17 @@
 import { Link, Outlet } from "react-router-dom"
-
+import { FaAngleDown } from "react-icons/fa6";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function Laptop() {
+  const {active} = useContext(Context)
   return (
     <div>
-      <div className="laptop__list">
-          <Link to="acer" className='laptop__link'>Acer</Link>
-          <Link to="hp" className='laptop__link'>Hp</Link>
-          <Link to="lenavo" className='laptop__link'>Lenavo</Link>
+      <div className={`left__list ${active == true ? 'active' : ""}`}>
+        <p><FaAngleDown /></p>
+          <Link to="acer" className='products__link'>Acer</Link>
+          <Link to="hp" className='products__link'>Hp</Link>
+          <Link to="lenavo" className='products__link'>Lenavo</Link>
           
         </div>
         <Outlet/>
