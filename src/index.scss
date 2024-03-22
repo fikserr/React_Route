@@ -181,4 +181,30 @@
         opacity: 1;
         display: block;
     }
+
+    .container{
+        .top{
+            padding-top: 50px;
+            width: 100%;
+            display: flex;
+            &__content{
+                padding-top: 100px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+               position: relative;
+               .btn__close{
+                position: absolute;
+                right: -100px;
+                font-size: 30px;
+               }
+            }
+            &__more{
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+            }
+        }
+    }
 }
